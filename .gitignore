@@ -1,0 +1,19 @@
+# Sistema macOS
+.DS_Store
+
+# Configurações do IntelliJ / IDEs
+.idea/
+*.iml
+.vscode/
+
+# Compilação e Build (Maven / Gradle)
+target/
+build/
+out/
+.gradle/
+
+# Binários e logs
+*.class
+*.jar
+*.war
+*.log
