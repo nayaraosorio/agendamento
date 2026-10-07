@@ -15,7 +15,6 @@ public class Medico {
     private Set<EspecialidadeMedica> especialidades;
     private boolean ativo;
 
-    // Construtor 1: Para criar um NOVO médico
     public Medico(String nome, String crm, Set<EspecialidadeMedica> especialidades) {
         if (nome == null || nome.isBlank()) {
             throw new IllegalArgumentException("O NOME do médico é OBRIGATÓRIO.");
@@ -34,7 +33,6 @@ public class Medico {
         this.ativo = true;
     }
 
-    // Construtor 2: Para RECRIAR o médico vindo do Banco de Dados
     public Medico(UUID id, String nome, String crm, Set<EspecialidadeMedica> especialidades, boolean ativo) {
         this.id = id;
         this.nome = nome;
