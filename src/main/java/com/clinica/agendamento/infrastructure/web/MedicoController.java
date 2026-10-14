@@ -4,7 +4,6 @@ import com.clinica.agendamento.application.dto.input.CadastrarMedico;
 import com.clinica.agendamento.application.dto.output.MedicoOutput;
 import com.clinica.agendamento.application.gateways.MedicoRepositoryGateway;
 import com.clinica.agendamento.application.usecases.CadastrarMedicoUseCase;
-import com.clinica.agendamento.infrastructure.persistence.entity.MedicoJpaEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
