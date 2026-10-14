@@ -15,9 +15,18 @@ import org.springframework.context.annotation.Configuration;
 public class UseCaseConfig {
 
     @Bean
-    public AgendarConsultaUseCase agendarConsultaUseCase(ConsultaRepositoryGateway consultaRepositoryGateway) {
-        return new AgendarConsultaUseCase(consultaRepositoryGateway);
+    public AgendarConsultaUseCase agendarConsultaUseCase(
+            ConsultaRepositoryGateway consultaRepositoryGateway,
+            PacienteRepositoryGateway pacienteRepositoryGateway,
+            MedicoRepositoryGateway medicoRepositoryGateway
+    ) {
+        return new AgendarConsultaUseCase(
+                consultaRepositoryGateway,
+                pacienteRepositoryGateway,
+                medicoRepositoryGateway
+        );
     }
+
     @Bean
    public CadastrarMedicoUseCase cadastrarMedicoUseCase(MedicoRepositoryGateway medicoRepositoryGateway) {
         return new CadastrarMedicoUseCase(medicoRepositoryGateway);
