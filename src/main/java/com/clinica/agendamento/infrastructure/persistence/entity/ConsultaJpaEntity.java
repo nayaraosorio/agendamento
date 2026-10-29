@@ -70,11 +70,14 @@ public class ConsultaJpaEntity {
 
     public Consulta paraDominio() {
         return new Consulta(
+                this.id,
                 this.pacienteId,
                 this.medicoId,
                 this.dataHora,
+                this.status,
                 this.tipoAtendimento,
-                this.modalidadeAtendimento
+                this.modalidadeAtendimento,
+                this.motivoCancelamento
         );
     }
 

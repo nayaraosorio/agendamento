@@ -45,6 +45,21 @@ public class Consulta {
         this.status = StatusConsulta.AGENDADA;
     }
 
+    public Consulta(UUID id, UUID pacienteId, UUID medicoId, LocalDateTime dataHora,
+                    StatusConsulta status, TipoAtendimento tipoAtendimento,
+                    ModalidadeAtendimento modalidadeAtendimento, String motivoCancelamento) {
+        this.id = id;
+        this.pacienteId = pacienteId;
+        this.medicoId = medicoId;
+        this.dataHora = dataHora;
+        this.status = status;
+        this.tipoAtendimento = tipoAtendimento;
+        this.modalidadeAtendimento = modalidadeAtendimento;
+        this.motivoCancelamento = motivoCancelamento;
+    }
+
+
+
     public void cancelar(String motivo) {
         if (this.status != StatusConsulta.AGENDADA) {
             throw new IllegalArgumentException("Apenas consulta com status AGENDADA pode ser CANCELADA.");
